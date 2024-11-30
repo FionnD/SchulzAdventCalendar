@@ -85,10 +85,12 @@ body {
 }
 
 @media (max-width: 480px) {
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+}
 
-    .calendar {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Larger minimum size */
-        gap: 20px;
     }
 }
 
