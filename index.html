@@ -45,7 +45,7 @@
     for (let i = 1; i <= 24; i++) {
       document.write(`
         <div class="door" id="door-${i}" style="background-image: url('${doorImages[i - 1]}');">
-          <a href="stories/day-${i}.html" id="link-${i}" class="door-link">Day ${i}</a>
+          <a href="stories/day-${i}.html" id="link-${i}" class="door-link">${i}</a>
         </div>
       `);
     }
