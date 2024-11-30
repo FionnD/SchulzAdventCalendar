@@ -31,51 +31,73 @@ body {
   background-size: cover;
 }
 
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between doors */
+  padding: 20px;
+  margin: 20px auto;
+  justify-content: center; /* Center the grid within the page */
+  align-items: center; /* Vertically align items in their cells */
+  max-width: 90%; /* Prevent grid from overflowing the screen width */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
 .door {
-  width: 150px; /* Set fixed width */
-  height: 150px; /* Set fixed height to match width */
-  background-size: cover; /* Ensure image covers the entire door */
+  width: 100%; /* Full width of the grid cell */
+  aspect-ratio: 1 / 1; /* Ensure doors are always square */
+  background-size: cover; /* Background image covers the entire door */
   background-position: center; /* Center the image */
-  border: 5px solid #fff;
+  border: 2px solid #fff;
   border-radius: 10px;
-  position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  display: flex; /* Use flexbox to align content */
-  justify-content: center; /* Center link horizontally */
-  align-items: center; /* Center link vertically */
-  overflow: hidden; /* Ensure content doesn’t overflow door boundaries */
+  display: flex; /* Center the link text */
+  justify-content: center;
+  align-items: center;
 }
 
 .door-link {
-  width: 100%; /* Make the link fill the door */
-  height: 100%; /* Match the door dimensions */
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
   text-decoration: none;
-  font-size: 1.2em; /* Slightly smaller text to avoid clutter */
+  font-size: 1.2em; /* Adjust font size for better visibility */
   color: #fff;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
-  box-sizing: border-box; /* Ensure padding doesn’t affect dimensions */
+  text-align: center;
 }
-
-
-.calendar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
-  gap: 15px; /* Space between doors */
-  padding: 20px;
-  margin: 20px auto; /* Center the grid */
-  justify-content: center; /* Align grid in the center of the page */
-}
-
 
 .door:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
   transition: transform 0.2s;
 }
+
+@media (max-width: 768px) {
+  .calendar {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller doors for smaller screens */
+  }
+
+  .door {
+    aspect-ratio: 1 / 1; /* Maintain square doors */
+  }
+
+  .door-link {
+    font-size: 1em; /* Slightly smaller text */
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Smaller doors for very small screens */
+  }
+
+  .door {
+    aspect-ratio: 1 / 1;
+  }
+
+  .door-link {
+    font-size: 0.9em; /* Adjust text size */
+  }
+}
+
 
 
 footer {
