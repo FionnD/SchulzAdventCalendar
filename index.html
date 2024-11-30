@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winnies Abenteuer Adventskalender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Winnies Abenteuer Adventskalender</h1>
+    <p>Begleite Winnie auf ihren Abenteuern in Richtung Weihnachten!</p>
+  </div>
+ <div class="calendar">
+  <!-- Calendar Doors -->
+  <script>
+    const doorImages = [
+      'images/door1.png',  // Door 1 image
+      'images/door2.png',  // Door 2 image
+      'images/door3.png',  // Door 3 image
+      'images/door4.png',  // Door 4 image
+      'images/door5.png',  // Door 5 image
+      'images/door6.png',  // Door 6 image
+      'images/door7.png',  // Door 7 image
+      'images/door8.png',  // Door 8 image
+      'images/door9.png',  // Door 9 image
+      'images/door10.png', // Door 10 image
+      'images/door11.png', // Door 11 image
+      'images/door12.png', // Door 12 image
+      'images/door13.png', // Door 13 image
+      'images/door14.png', // Door 14 image
+      'images/door15.png', // Door 15 image
+      'images/door16.png', // Door 16 image
+      'images/door17.png', // Door 17 image
+      'images/door18.png', // Door 18 image
+      'images/door19.png', // Door 19 image
+      'images/door20.png', // Door 20 image
+      'images/door21.png', // Door 21 image
+      'images/door22.png', // Door 22 image
+      'images/door23.png', // Door 23 image
+      'images/door24.png'  // Door 24 image
+    ];
+
+    for (let i = 1; i <= 24; i++) {
+      document.write(`
+        <div class="door" id="door-${i}" style="background-image: url('${doorImages[i - 1]}');">
+          <a href="stories/day-${i}.html" id="link-${i}" class="door-link">Day ${i}</a>
+        </div>
+      `);
+    }
+  </script>
+</div>
+
+
+  <footer>
+    <p>&copy; 2024 Winnie's Magical Adventures - Fionn and Sarah&trade; </p>
+  </footer>
+  <script src="scripts.js"></script>
+

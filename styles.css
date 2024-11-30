@@ -1,0 +1,85 @@
+/* General Christmas Aesthetic */
+body {
+  font-family: 'Lucida Handwriting', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('images/background.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-bottom: 4px solid #e94e77;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+
+.story {
+  background: url('images/background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.door {
+  width: 150px; /* Set fixed width */
+  height: 150px; /* Set fixed height to match width */
+  background-size: cover; /* Ensure image covers the entire door */
+  background-position: center; /* Center the image */
+  border: 5px solid #fff;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex; /* Use flexbox to align content */
+  justify-content: center; /* Center link horizontally */
+  align-items: center; /* Center link vertically */
+  overflow: hidden; /* Ensure content doesn’t overflow door boundaries */
+}
+
+.door-link {
+  width: 100%; /* Make the link fill the door */
+  height: 100%; /* Match the door dimensions */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  text-decoration: none;
+  font-size: 1.2em; /* Slightly smaller text to avoid clutter */
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+  box-sizing: border-box; /* Ensure padding doesn’t affect dimensions */
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 doors per row */
+  gap: 20px; /* Space between doors */
+  padding: 20px;
+  margin: 20px auto;
+  justify-content: center; /* Center the calendar grid */
+}
+
+.door:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  transition: transform 0.2s;
+}
+
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9em;
+}
+
