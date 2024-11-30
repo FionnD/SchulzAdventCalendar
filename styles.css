@@ -85,9 +85,12 @@ body {
 }
 
 @media (max-width: 480px) {
-  .calendar {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Smaller doors for very small screens */
-  }
+
+    .calendar {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Larger minimum size */
+        gap: 20px;
+    }
+}
 
   .door {
     aspect-ratio: 1 / 1;
